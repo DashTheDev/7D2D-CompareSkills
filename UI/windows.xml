@@ -1,0 +1,56 @@
+﻿<configs>
+	<set xpath="/windows/window[@name='windowSkillList']/@controller">CompareSkills.XUiC_CompareSkillListWindow, CompareSkills</set>
+
+	<!-- Inser the new compare to player header -->
+	<insertBefore xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[1]">
+		<rect name="comparePlayerHeader" pos="5,-49" width="645" height="50">
+			<sprite depth="1" name="background" color="[lightGrey]" type="sliced"/>
+
+			<rect depth="1" width="647" height="50">
+				<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" pos="-2,3" width="647" height="50" color="[black]" type="sliced" fillcenter="false" />
+				<label depth="1" pos="8,-23" text="Compare skill levels to ally" justify="left" pivot="left" width="647" />
+				<player_selector name="playerSelect" pos="439,-6" width="200" height="32" filter="ally" />
+			</rect>
+		</rect>
+	</insertBefore>
+
+	<!-- Move the table header down -->
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]/@pos">5,-96</set>
+
+	<!-- Reduce grid rows by one and move the grid down -->
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/grid[1]/@rows">13</set>
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/grid[1]/@pos">6,-135</set>
+	
+	<!-- Change width of table header title background -->
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]/rect[1]/sprite[1]/@width">453</set>
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]/rect[1]/sprite[2]/@width">516</set>
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]/rect[1]/sprite[3]/@width">516</set>
+	
+	<!-- Change skill level column to two columns (Your level, their level) -->
+	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]/rect[2]" />
+	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]/rect[2]" />
+	<!-- Cost -->
+	<append xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]">
+		<rect depth="1" pos="451,0" width="60" height="40" visible="{isnormal}">
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="66" height="46" color="[black]" type="sliced" fillcenter="false" />
+
+			<label depth="1" pos="8,-20" text="Cost" justify="center" pivot="left" width="44" />
+		</rect>
+	</append>
+	<!-- You -->
+	<append xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]">
+		<rect depth="1" pos="514,0" width="60" height="40">
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="66" height="46" color="[black]" type="sliced" fillcenter="false" />
+
+			<label depth="1" pos="8,-20" text="You" justify="center" pivot="left" width="44" />
+		</rect>
+	</append>
+	<!-- Them -->
+	<append xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[2]/rect[2]">
+		<rect depth="1" pos="577,0" width="65" height="40">
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="71" height="46" color="[black]" type="sliced" fillcenter="false" />
+
+			<label depth="1" pos="8,-20" text="Them" justify="center" pivot="left" width="49" />
+		</rect>
+	</append>
+</configs>

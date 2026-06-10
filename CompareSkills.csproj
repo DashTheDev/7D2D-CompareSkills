@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="Local.props" Condition="Exists('Local.props')" />
+  <Import Project="Build.props" />
+  <Import Project="Build.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8067F976-E450-4127-8C5C-8C2D58F97DE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompareSkills</RootNamespace>
+    <AssemblyName>CompareSkills</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <NoStdLib Condition="'$(DesignTimeBuild)' != 'true'">true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\HarmonyExtensions.cs" />
+    <Compile Include="Harmony\NetPackagePlayerStatsPatch.cs" />
+    <Compile Include="Harmony\NetPackageEntitySetSkillLevelClientPatch.cs" />
+    <Compile Include="Harmony\NetPackageEntitySetSkillLevelServerPatch.cs" />
+    <Compile Include="Data\ReadableOpCodes.cs" />
+    <Compile Include="Harmony\RewardSkillPatch.cs" />
+    <Compile Include="Harmony\SkillPerkLevelBuyPatch.cs" />
+    <Compile Include="Harmony\SkillAttributeLevelBuyPatch.cs" />
+    <Compile Include="Harmony\PlayerSpawnedPatch.cs" />
+    <Compile Include="Harmony\SkillEntryPatches.cs" />
+    <Compile Include="Mod\Init.cs" />
+    <Compile Include="Mod\Config.cs" />
+    <Compile Include="Network\NetPackagePlayerProgressionClient.cs" />
+    <Compile Include="Data\DisplayPlayer.cs" />
+    <Compile Include="Extensions\GameManagerExtensions.cs" />
+    <Compile Include="Utility\SetSkillLevelNotifier.cs" />
+    <Compile Include="Utility\ProgressionUtility.cs" />
+    <Compile Include="Utility\GeneralUtility.cs" />
+    <Compile Include="Data\SkillLevels.cs" />
+    <Compile Include="UI\XUiC_CompareSkillListWindow.cs" />
+    <Compile Include="UI\XUiC_PlayerSelector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mod\ModInfo.xml" />
+    <None Include="Mod\ModInfo.xml">
+      <Visible>false</Visible>
+      <Link>ModInfo.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UI\common_controls.xml" />
+    <None Include="UI\common_controls.xml">
+      <Visible>false</Visible>
+      <Link>Config\XUi_Common\controls.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UI\controls.xml" />
+    <None Include="UI\controls.xml">
+      <Visible>false</Visible>
+      <Link>Config\XUi\controls.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UI\windows.xml" />
+    <None Include="UI\windows.xml">
+      <Visible>false</Visible>
+      <Link>Config\XUi\windows.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="Build.props" />
+    <None Include="Build.targets" />
+    <None Include="Local.props" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Directory.Build.targets" Condition="Exists('$(SolutionDir)\Tools\Directory.Build.targets')" />
+</Project>

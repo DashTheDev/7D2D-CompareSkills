@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<Name value="CompareSkills"/>
+	<Author value="DashTheDev"/>
+	<DisplayName value="Compare Skills"/>
+	<Description value="Extends the skills UI to allow you to compare your levels with your allies."/>
+	<Version value="1.0.0"/>
+</xml>

@@ -1,0 +1,11 @@
+# Build results
+bin/
+obj/
+out/
+
+# VS files
+.vs/
+*.user
+
+# Local paths
+Local.props

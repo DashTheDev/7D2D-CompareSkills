@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<HarmonyPath>$(GamePath)\Mods\0_TFP_Harmony</HarmonyPath>
+		<GameDataPath>$(GamePath)\7DaysToDie_Data</GameDataPath>
+		<ManagedDataPath>$(GameDataPath)\Managed</ManagedDataPath>
+		<DeployTargetPath>$(GamePath)\Mods\$(MSBuildProjectName)\</DeployTargetPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Newtonsoft.Json">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(ManagedDataPath)\Newtonsoft.Json.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>$(HarmonyPath)\0Harmony.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="mscorlib">
+			<HintPath>$(ManagedDataPath)\mscorlib.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="System.Xml">
+			<HintPath>$(ManagedDataPath)\System.Xml.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="System">
+			<HintPath>$(ManagedDataPath)\System.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="System.Xml.Linq">
+			<HintPath>$(ManagedDataPath)\System.Xml.Linq.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(ManagedDataPath)\Assembly-CSharp.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="LogLibrary">
+			<HintPath>$(ManagedDataPath)\LogLibrary.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>$(ManagedDataPath)\UnityEngine.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>$(ManagedDataPath)\UnityEngine.AnimationModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>$(ManagedDataPath)\UnityEngine.AudioModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(ManagedDataPath)\UnityEngine.CoreModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>$(ManagedDataPath)\UnityEngine.InputLegacyModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>$(ManagedDataPath)\UnityEngine.PhysicsModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+
+</Project>
