@@ -7,7 +7,8 @@
 
 A [7 Days to Die](https://store.steampowered.com/app/251570/7_Days_to_Die/) mod that extends the skills UI to allow you to compare your levels with your allies.
 
-- Coming soon...
+- Extends the skills UI window, adding an ally player selector and a new column for each skill displaying their level in comparison to yours
+- Synchronises skill progression for each character across client and server
 
 ## Installation
 Download the [latest release](https://github.com/DashTheDev/7D2D-CompareSkills/releases/latest), unzip and drop the `CompareSkills` folder into your game's `Mods` directory.
