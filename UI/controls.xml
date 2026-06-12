@@ -9,13 +9,13 @@
 			<sprite depth="2" name="groupIcon" sprite="{groupicon}" style="icon32px" pos="6, -3" color="{statuscolor}" foregroundlayer="true"/>
 			<label width="386" name="groupName" pos="44,-20" pivot="left" depth="2" text="{groupname}" color="{statuscolor}"/>
 
-			<sprite depth="2" pos="481,-19" sprite="ui_game_symbol_check" visible="{cannotpurchase}" style="icon32px" pivot="center" color="{statuscolor}" foregroundlayer="true" />
-			<label width="80" pos="481,-20" depth="2" text="{grouppointcost}" visible="{canpurchase}" pivot="center" justify="center" color="{statuscolor}"/>
+			<sprite depth="2" pos="422,-19" sprite="ui_game_symbol_check" visible="{cannotpurchase}" style="icon32px" pivot="center" color="{statuscolor}" foregroundlayer="true" />
+			<label width="80" pos="422,-20" depth="2" text="{grouppointcost}" visible="{canpurchase}" pivot="center" justify="center" color="{statuscolor}"/>
 
-			<sprite depth="2" pos="544,-19"  sprite="ui_game_symbol_lock" visible="{islocked}" style="icon32px" pivot="center" color="{statuscolor}" foregroundlayer="true"/>
-			<label width="80" pos="544,-20" depth="2" text="{grouplevel}" visible="{isnotlocked}" pivot="center" justify="center" color="{statuscolor}"/>
+			<sprite depth="2" pos="509,-19"  sprite="ui_game_symbol_lock" visible="{islocked}" style="icon32px" pivot="center" color="{statuscolor}" foregroundlayer="true"/>
+			<label width="80" pos="509,-20" depth="2" text="{grouplevel}" visible="{isnotlocked}" pivot="center" justify="center" color="{statuscolor}"/>
 			
-			<label width="80" pos="609,-20" depth="2" text="{comparedgrouplevel}" pivot="center" justify="center" />
+			<label width="80" pos="598,-20" depth="2" text="{comparedgrouplevel}" pivot="center" justify="center" />
 		</panel>
 	</append>
 </configs>

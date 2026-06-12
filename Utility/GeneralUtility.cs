@@ -28,7 +28,7 @@ public class GeneralUtility
 
     private static void LogTranspiler(string methodName, bool isBefore, List<CodeInstruction> instructions)
     {
-        if (!CompareSkillsMod.Config.DebugTranspilers)
+        if (!CompareSkillsMod.IsDebug || !CompareSkillsMod.Config.DebugTranspilers)
         {
             return;
         }
