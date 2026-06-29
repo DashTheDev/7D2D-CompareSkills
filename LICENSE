@@ -1,5 +1,4 @@
-MIT License
-
+MIT License (with Attribution)
 Copyright (c) 2026 DashTheDev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -9,8 +8,34 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software, including any packages,
+   archives, or bundles distributed to end-users that contain the Software or
+   any portion thereof. The LICENSE file must be included in its entirety in
+   all such distributions.
+
+2. USER-FACING ATTRIBUTION REQUIREMENT: If the Software (or any derivative
+   work based upon it) is distributed to end-users (such as via a mod site,
+   app store, or similar distribution platform), attribution must be displayed
+   as follows:
+
+   a) On the distribution platform's listing or description page (e.g, a mod
+      page, store listing, or project page), clearly and prominently stating:
+
+        "Contains code originally created by DashTheDev."
+
+   b) If no distribution platform listing exists (e.g, the Software is shared
+      directly or embedded in another product without a public listing),
+      attribution must instead be displayed within the end-user interface in a
+      visible location such as an "About," "Credits," or "Help" screen
+      (or equivalent), clearly stating:
+
+        "Contains code originally created by DashTheDev."
+
+3. PUBLISH DATE CLAUSE: Any distribution of the Software or derivative works
+   published on or after June 30, 2026 (the date of this license) shall be
+   subject to these terms in their entirety, regardless of when the original
+   copy of the Software was obtained.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
