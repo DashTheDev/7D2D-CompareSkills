@@ -52,7 +52,7 @@ public class NetPackagePlayerProgressionClient : NetPackage
             return;
         }
 
-        GeneralUtility.LogLine("Received player progression package from server!");
+        CompareSkillsMod.Instance.Logger.LogLine("Received player progression package from server!");
         ProgressionUtility.UpdateSkillLevelsForPlayer(EntityId, SkillLevels);
     }
 }

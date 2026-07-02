@@ -29,7 +29,7 @@ public class XUiC_CompareSkillListWindow : XUiC_SkillListWindow
     {
         base.Update(_dt);
 
-        if (CompareSkillsMod.IsDebug && GeneralUtility.CheckKeyDown("`"))
+        if (CompareSkillsMod.Instance.Config.IsDebug && GeneralUtility.CheckKeyDown("`"))
         {
             playerSelector?.ToggleDebugMode();
         }

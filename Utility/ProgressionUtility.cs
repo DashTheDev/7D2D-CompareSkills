@@ -51,12 +51,12 @@ public static class ProgressionUtility
             SingletonMonoBehaviour<ConnectionManager>.Instance.SendPackage(package, _allButAttachedToEntityId: progEntityId);
         }
 
-        GeneralUtility.LogLine($"Sending player progression package to client{(targetEntityId.HasValue ? "" : "s")}!");
+        CompareSkillsMod.Instance.Logger.LogLine($"Sending player progression package to client{(targetEntityId.HasValue ? "" : "s")}!");
     }
     
     public static void SendPlayerSkillLevelUpdates(int entityId, string skillName, int skillLevel)
     {
-        GeneralUtility.LogLine("Sending player set skill level packages to clients!");
+        CompareSkillsMod.Instance.Logger.LogLine("Sending player set skill level packages to clients!");
 
         if (GeneralUtility.IsRunningOnServer())
         {

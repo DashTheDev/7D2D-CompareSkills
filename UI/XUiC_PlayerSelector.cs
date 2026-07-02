@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using static ParticleEffect;
 
 namespace CompareSkills;
 
@@ -27,20 +29,12 @@ public class XUiC_PlayerSelector : XUiController
         RefreshPlayerList();
     }
 
-    public override bool ParseAttribute(string _name, string _value, XUiController _parent)
+    [XuiXmlAttribute("filter")]
+    private void ParseFilterAttribute(string value)
     {
-        switch (_name)
+        if (Enum.TryParse(value, true, out PlayerSelectorFilter result))
         {
-            case "filter":
-                if (Enum.TryParse<PlayerSelectorFilter>(_value, true, out PlayerSelectorFilter result))
-                {
-                    filter = result;
-                }
-
-                return true;
-
-            default:
-                return base.ParseAttribute(_name, _value, _parent);
+            filter = result;
         }
     }
 

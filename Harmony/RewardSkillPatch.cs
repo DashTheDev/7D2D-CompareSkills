@@ -14,7 +14,7 @@ public class RewardSkillPatch
     {
         List<CodeInstruction> codes = new(instructions);
 
-        GeneralUtility.LogTranspilerBefore(nameof(RewardSkillPatch), codes);
+        CompareSkillsMod.Instance.Logger.LogTranspilerBefore(nameof(RewardSkillPatch), codes);
 
         MethodInfo connectionManagerIsServerGetter = AccessTools.PropertyGetter(typeof(ConnectionManager), nameof(ConnectionManager.IsServer));
         MethodInfo connectionManagerSendToServerMethod = AccessTools.Method(typeof(ConnectionManager), nameof(ConnectionManager.SendToServer));
@@ -74,8 +74,8 @@ public class RewardSkillPatch
             break;
         }
 
-        GeneralUtility.LogLine($"{nameof(RewardSkillPatch)} Transpiler patch {(patched ? "was" : "was NOT")} applied!");
-        GeneralUtility.LogTranspilerAfter(nameof(RewardSkillPatch), codes);
+        CompareSkillsMod.Instance.Logger.LogLine($"{nameof(RewardSkillPatch)} Transpiler patch {(patched ? "was" : "was NOT")} applied!");
+        CompareSkillsMod.Instance.Logger.LogTranspilerAfter(nameof(RewardSkillPatch), codes);
 
         return codes;
     }

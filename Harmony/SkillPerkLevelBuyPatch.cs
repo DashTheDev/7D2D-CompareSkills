@@ -12,7 +12,7 @@ public class SkillPerkLevelBuyPatch
     {
         List<CodeInstruction> codes = new(instructions);
 
-        GeneralUtility.LogTranspilerBefore(nameof(SkillPerkLevelBuyPatch), codes);
+        CompareSkillsMod.Instance.Logger.LogTranspilerBefore(nameof(SkillPerkLevelBuyPatch), codes);
 
         MethodInfo connectionManagerIsServerGetter = AccessTools.PropertyGetter(typeof(ConnectionManager), nameof(ConnectionManager.IsServer));
         MethodInfo connectionManagerSendToServerMethod = AccessTools.Method(typeof(ConnectionManager), nameof(ConnectionManager.SendToServer));
@@ -68,8 +68,8 @@ public class SkillPerkLevelBuyPatch
             break;
         }
 
-        GeneralUtility.LogLine($"{nameof(SkillPerkLevelBuyPatch)} Transpiler patch {(patched ? "was" : "was NOT")} applied!");
-        GeneralUtility.LogTranspilerAfter(nameof(SkillPerkLevelBuyPatch), codes);
+        CompareSkillsMod.Instance.Logger.LogLine($"{nameof(SkillPerkLevelBuyPatch)} Transpiler patch {(patched ? "was" : "was NOT")} applied!");
+        CompareSkillsMod.Instance.Logger.LogTranspilerAfter(nameof(SkillPerkLevelBuyPatch), codes);
 
         return codes;
     }

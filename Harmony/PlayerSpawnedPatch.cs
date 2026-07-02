@@ -25,7 +25,7 @@ public class PlayerSpawnedPatch
         }
         catch (Exception ex)
         {
-            GeneralUtility.LogLine(ex.StackTrace);
+            CompareSkillsMod.Instance.Logger.LogLine(ex.StackTrace);
         }
     }
 }

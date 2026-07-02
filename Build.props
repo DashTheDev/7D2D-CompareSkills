@@ -6,6 +6,7 @@
 		<GameDataPath>$(GamePath)\7DaysToDie_Data</GameDataPath>
 		<ManagedDataPath>$(GameDataPath)\Managed</ManagedDataPath>
 		<DeployTargetPath>$(GamePath)\Mods\$(MSBuildProjectName)\</DeployTargetPath>
+		<GameVersion>V3_0</GameVersion>
 	</PropertyGroup>
 
 	<ItemGroup>

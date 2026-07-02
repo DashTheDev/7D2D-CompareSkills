@@ -1,7 +1,7 @@
 ﻿<configs>
-	<remove xpath="controls/skill_entry/panel[1]" />
-	<append xpath="controls/skill_entry">
-		<panel disableautobackground="true" depth="2" width="645" height="46" controller="SkillEntry" style="press, hover, scroll" enabled_color="[iconColor]" disabled_color="[disabledLabelColor]" row_color="[darkGrey]" hover_color="[mediumGrey]" sound="[recipe_click]" sound_play_on_hover="[default_hover]">
+	<remove xpath="templates/skill_entry/rect[1]" />
+	<append xpath="templates/skill_entry">
+		<rect disableautobackground="true" depth="2" width="645" height="46" controller="SkillEntry" style="press, hover, scroll" enabled_color="[iconColor]" disabled_color="[disabledLabelColor]" row_color="[darkGrey]" hover_color="[mediumGrey]" sound="[recipe_click]" sound_play_on_hover="[default_hover]">
 			<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,2" width="647" height="48" color="[black]" type="sliced" fillcenter="false" />
 
 			<sprite depth="1" color="{rowstatecolor}" sprite="{rowstatesprite}" width="644"  height="45" type="sliced" />
@@ -16,6 +16,6 @@
 			<label width="80" pos="509,-20" depth="2" text="{grouplevel}" visible="{isnotlocked}" pivot="center" justify="center" color="{statuscolor}"/>
 			
 			<label width="80" pos="598,-20" depth="2" text="{comparedgrouplevel}" pivot="center" justify="center" />
-		</panel>
+		</rect>
 	</append>
 </configs>

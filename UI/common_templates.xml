@@ -1,5 +1,5 @@
 ﻿<configs>
-	<append xpath="/controls">
+	<append xpath="/templates">
 		<player_selector depth="1" pos="0,0" width="200" height="32">
 			<rect name="${name}" depth="${depth}" pos="${pos}" filter="${filter}" disableautobackground="true" controller="CompareSkills.XUiC_PlayerSelector, CompareSkills">
 				<button depth="4" name="prevPlayer" style="icon30px, press" width="${height-2}" height="${height-2}" pos="${Round(height/2, 0)},${Round(-height/2, 0)}" enabled="{hasprevplayer}" sprite="ui_game_symbol_arrow_left" disabledcolor="[lightGrey]" pivot="center" sound="[paging_click]" use_selection_box="false" />

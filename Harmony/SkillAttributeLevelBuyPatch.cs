@@ -12,7 +12,7 @@ public class SkillAttributeLevelBuyPatch
     {
         List<CodeInstruction> codes = new(instructions);
 
-        GeneralUtility.LogTranspilerBefore(nameof(SkillAttributeLevelBuyPatch), codes);
+        CompareSkillsMod.Instance.Logger.LogTranspilerBefore(nameof(SkillAttributeLevelBuyPatch), codes);
 
         MethodInfo connectionManagerIsServerGetter = AccessTools.PropertyGetter(typeof(ConnectionManager), nameof(ConnectionManager.IsServer));
         MethodInfo connectionManagerSendToServerMethod = AccessTools.Method(typeof(ConnectionManager), nameof(ConnectionManager.SendToServer));
@@ -68,8 +68,8 @@ public class SkillAttributeLevelBuyPatch
             break;
         }
 
-        GeneralUtility.LogLine($"{nameof(SkillAttributeLevelBuyPatch)} Transpiler patch {(patched ? "was" : "was NOT")} applied!");
-        GeneralUtility.LogTranspilerAfter(nameof(SkillAttributeLevelBuyPatch), codes);
+        CompareSkillsMod.Instance.Logger.LogLine($"{nameof(SkillAttributeLevelBuyPatch)} Transpiler patch {(patched ? "was" : "was NOT")} applied!");
+        CompareSkillsMod.Instance.Logger.LogTranspilerAfter(nameof(SkillAttributeLevelBuyPatch), codes);
 
         return codes;
     }

@@ -17,6 +17,7 @@
     <Deterministic>true</Deterministic>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <DefineConstants>$(GameVersion)</DefineConstants>
     <NoStdLib Condition="'$(DesignTimeBuild)' != 'true'">true</NoStdLib>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -48,8 +49,8 @@
     <Compile Include="Harmony\SkillAttributeLevelBuyPatch.cs" />
     <Compile Include="Harmony\PlayerSpawnedPatch.cs" />
     <Compile Include="Harmony\SkillEntryPatches.cs" />
-    <Compile Include="Mod\Init.cs" />
-    <Compile Include="Mod\Config.cs" />
+    <Compile Include="Mod\CompareSkillsMod.cs" />
+    <Compile Include="Mod\CompareSkillsConfig.cs" />
     <Compile Include="Network\NetPackagePlayerProgressionClient.cs" />
     <Compile Include="Data\DisplayPlayer.cs" />
     <Compile Include="Extensions\GameManagerExtensions.cs" />
@@ -61,28 +62,27 @@
     <Compile Include="UI\XUiC_PlayerSelector.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mod\ModInfo.xml" />
+    <None Include="LICENSE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Mod\ModInfo.xml">
-      <Visible>false</Visible>
-      <Link>ModInfo.xml</Link>
+      <TargetPath>ModInfo.xml</TargetPath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="UI\common_controls.xml" />
-    <None Include="UI\common_controls.xml">
-      <Visible>false</Visible>
-      <Link>Config\XUi_Common\controls.xml</Link>
+    <None Include="Mod\Localization.csv">
+      <TargetPath>Config\Localization.csv</TargetPath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="UI\controls.xml" />
-    <None Include="UI\controls.xml">
-      <Visible>false</Visible>
-      <Link>Config\XUi\controls.xml</Link>
+    <None Include="UI\common_templates.xml">
+      <TargetPath>Config\XUi_Common\templates.xml</TargetPath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="UI\windows.xml" />
+    <None Include="UI\templates.xml">
+      <TargetPath>Config\XUi_InGame\templates.xml</TargetPath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="UI\windows.xml">
-      <Visible>false</Visible>
-      <Link>Config\XUi\windows.xml</Link>
+      <TargetPath>Config\XUi_InGame\windows.xml</TargetPath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -91,6 +91,12 @@
     <None Include="Build.props" />
     <None Include="Build.targets" />
     <None Include="Local.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModLibs\Libraries\ModCore\ModCore.csproj">
+      <Project>{652a05e0-bb41-4957-b51f-e81314544198}</Project>
+      <Name>ModCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
