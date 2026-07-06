@@ -2,7 +2,6 @@
 
 	<Import Project="Local.props" Condition="Exists('Local.props')" />
 	<Import Project="Build.props" />
-	<Import Project="Build.targets" />
 
 	<PropertyGroup>
 		<TargetFramework>net48</TargetFramework>
@@ -16,8 +15,13 @@
 		<DefineConstants>$(GameVersion)</DefineConstants>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+	</PropertyGroup>
+
 	<ItemGroup>
-		<ProjectReference Include="..\ModLibs\Libraries\ModCore\ModCore.csproj" />
+		<PackageReference Include="DashTheDev.7D2D.ModCore" Version="1.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
