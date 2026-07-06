@@ -1,7 +1,7 @@
 # Compare Skills
 [![Latest Release](https://img.shields.io/github/v/release/DashTheDev/7D2D-CompareSkills)](https://github.com/DashTheDev/7D2D-CompareSkills/releases/latest)
 <br>
-![7D2D v2.6](https://img.shields.io/badge/7D2D-v2.6-brightgreen)
+![7D2D v3.0](https://img.shields.io/badge/7D2D-v2.6-brightgreen)
 <br>
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
